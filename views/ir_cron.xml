@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="ir_cron_update_date_value" model="ir.cron">
+            <field name="name">Purchase: Update lock fields</field>
+            <field name="model_id" ref="model_purchase_order" />
+            <field name="state">code</field>
+            <field name="code">model.check_lock()</field>
+            <field name="interval_number">5</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False" />
+            <field name="active" eval="True" />
+        </record>
+    </data>
+</odoo>
